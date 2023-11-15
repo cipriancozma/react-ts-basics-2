@@ -1,10 +1,10 @@
 import { InputProps } from "../types";
 
-export default function Input({ id, type, label }: InputProps) {
+export default function Input({ id, label, ...props }: InputProps) {
   return (
     <p>
       <label htmlFor={id}>{label}</label>
-      <input id={id} type={type} />
+      <input id={id} {...props} />
     </p>
   );
 }
